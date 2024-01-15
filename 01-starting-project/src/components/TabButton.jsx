@@ -1,8 +1,12 @@
-export default function TabButton(props) {
+export default function TabButton({ children, p_fnOnClick, isSelected }) {
   return (
     <li>
-      {/* <button onClick={props.pfnOnClick}>{props.children}</button> */}
-      <button onClick={props.p_fnOnClick}>{props.children}</button>
+      <button
+        className={isSelected ? "active" : undefined}
+        onClick={p_fnOnClick}
+      >
+        {children}
+      </button>
     </li>
   );
 }
